@@ -171,7 +171,7 @@ function Header() {
                         alt="Failed to Load Image"
                         className="h-16 my-2 w-auto bg-none "
                       />
-                      <h1 className="text-lg">It's Kcreation</h1>
+                      <h1 className="text-lg">It Kcreation</h1>
                     </div>
                   </SheetTitle>
                   <SheetDescription>Menus</SheetDescription>

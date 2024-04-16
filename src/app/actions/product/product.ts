@@ -1,6 +1,5 @@
 "use server"
 import { Category } from "@/models/Category"
-import { Favorites } from "@/models/Favorites"
 import { Product } from "@/models/Product"
 import { connectToDB } from "@/utils/connectToDb"
 
