@@ -17,7 +17,7 @@ import { getRecents } from "./actions/product/product";
 import toast from "react-hot-toast";
 
 export default function Home() {
-  const [products, setProduts] = useState([]);
+  const [products, setProduts] = useState<any>([]);
 
   const getTopProducts = async () => {
     const res = await getRecents();
