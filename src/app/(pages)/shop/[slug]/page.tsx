@@ -9,9 +9,9 @@ export default function Page({ params }: { params: { slug: string } }) {
     const [product,setProduct] = useState<any>()
     const getProduct = async() => {
         const res = await getProductById({id:params.slug})
-        console.log(JSON.parse(res.product))
+        console.log(JSON.parse(res.product || ""))
         if(res.success){
-            setProduct(JSON.parse(res?.product || {}))
+            setProduct(JSON.parse(res?.product || ""))
         }else{
             toast.error("Invalid Product ID.")
         }
