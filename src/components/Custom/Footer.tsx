@@ -5,6 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { FaRegCopyright } from "react-icons/fa";
+import Link from "next/link";
 function Footer() {
   return (
     <>
@@ -31,11 +32,10 @@ function Footer() {
           </div>
           <div className="lg:col-span-4 md:col-span-6 col-span-12">
             <h1 className="text-3xl">Pages</h1>
-            <div className="mt-3 flex flex-col gap-5">
-              <h1 className="ml-5 text-lg">Home</h1>
-              <h1 className="ml-5 text-lg">About</h1>
-              <h1 className="ml-5 text-lg">Contact</h1>
-              <h1 className="ml-5 text-lg">Terms & Conditions</h1>
+            <div  className="mt-3 flex flex-col gap-5">
+              <Link href={"/"} className="ml-5 text-lg">Home</Link>
+              <Link href={"/about"} className="ml-5 text-lg">About</Link>
+              <Link href={"/contact"} className="ml-5 text-lg">Contact</Link>
             </div>
           </div>
 

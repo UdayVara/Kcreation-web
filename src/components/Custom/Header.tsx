@@ -29,7 +29,12 @@ import { addCategory } from "@/app/actions/category/category";
 import toast from "react-hot-toast";
 import { addProduct } from "@/app/actions/product/product";
 import { auth, signIn, signOut } from "../../../auth";
-import { UpdateUser, getUser, signInUser, signOutUser } from "@/app/actions/auth/authentication";
+import {
+  UpdateUser,
+  getUser,
+  signInUser,
+  signOutUser,
+} from "@/app/actions/auth/authentication";
 
 function Header() {
   const addNewCategory = async () => {
@@ -63,28 +68,28 @@ function Header() {
       toast.error(res.message);
     }
   };
-  const [open,setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
   const [user, setUser] = useState<any>();
   const getUser1 = async () => {
     const user1 = await getUser();
-    console.log(user1)
+    console.log(user1);
     setUser(user1);
   };
-  console.log(user)
+  console.log(user);
   useEffect(() => {
     getUser1();
   }, []);
 
-  const handleUpdate = async() => {
-    const res = await UpdateUser(user.user)
+  const handleUpdate = async () => {
+    const res = await UpdateUser(user.user);
 
-    if(res.success){
-      toast.success(res.message)
-    }else{
-      toast.error(res.message)
+    if (res.success) {
+      toast.success(res.message);
+    } else {
+      toast.error(res.message);
     }
-    setOpen(!open)
-  }
+    setOpen(!open);
+  };
   // const handleAuth = async() => {
   //   const res = await signInUser({name:"UDay",email:"Uday@gmail.com",password:"12344"})
 
@@ -150,9 +155,21 @@ function Header() {
                   <DropdownMenuLabel>My Account</DropdownMenuLabel>
                   <DropdownMenuSeparator />
                   {/* <DropdownMenuItem>My Favorites</DropdownMenuItem> */}
-                  <DropdownMenuItem onClick={()=>{setOpen(!open)}
-                  }>Edit Profile</DropdownMenuItem>
-                  <DropdownMenuItem onClick={async()=>{await signOutUser()}}>Logout</DropdownMenuItem>
+                  <DropdownMenuItem
+                    onClick={() => {
+                      setOpen(!open);
+                    }}
+                  >
+                    Edit Profile
+                  </DropdownMenuItem>
+                  <DropdownMenuItem
+                    onClick={async () => {
+                      await signOutUser();
+                      window.location.reload();
+                    }}
+                  >
+                    Logout
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
@@ -174,34 +191,134 @@ function Header() {
                       <h1 className="text-lg">It Kcreation</h1>
                     </div>
                   </SheetTitle>
-                  <SheetDescription>Menus</SheetDescription>
+                  <SheetDescription><div className="flex flex-col text-black">
+                      <Link href={"/"} className="ml-5 text-lg">
+                        Home
+                      </Link>
+                      <Link href={"/about"} className="ml-5 text-lg">
+                        About
+                      </Link>
+                      <Link href={"/shop"} className="ml-5 text-lg">
+                        Shop
+                      </Link>
+                      <Link href={"/contact"} className="ml-5 text-lg">
+                        Contact
+                      </Link>
+                    </div></SheetDescription>
                 </SheetHeader>
               </SheetContent>
             </Sheet>
           </>
         ) : (
-          <Link href={"/signin"}>Sign in</Link>
+          <>
+            <Link href={"/signin"} className="md:block hidden">
+              Sign in
+            </Link>
+            <Sheet>
+              <SheetTrigger className="md:hidden block">
+                <GiHamburgerMenu className="text-xl" />
+              </SheetTrigger>
+              <SheetContent>
+                <SheetHeader>
+                  <SheetTitle>
+                    <div className="flex gap-2 items-center  ">
+                      <Image
+                        src={"/Images/kcreation_logo.png"}
+                        width={1000}
+                        height={1000}
+                        alt="Failed to Load Image"
+                        className="h-14 my-2 w-auto bg-none "
+                      />
+                      <h1 className="text-lg">It Kcreation</h1>
+                    </div>
+                  </SheetTitle>
+                  <SheetDescription>
+                    <div className="flex flex-col gap-5 text-black">
+                      <Link href={"/signin"} className="ml-5 text-lg">
+                        Signin
+                      </Link>
+                      <Link href={"/"} className="ml-5 text-lg">
+                        Home
+                      </Link>
+                      <Link href={"/about"} className="ml-5 text-lg">
+                        About
+                      </Link>
+                      <Link href={"/shop"} className="ml-5 text-lg">
+                        Shop
+                      </Link>
+                      <Link href={"/contact"} className="ml-5 text-lg">
+                        Contact
+                      </Link>
+                    </div>
+                  </SheetDescription>
+                </SheetHeader>
+              </SheetContent>
+            </Sheet>
+          </>
         )}
       </div>
-      <Sheet open={open} onOpenChange={()=>{setOpen(!open)}}>
+      <Sheet
+        open={open}
+        onOpenChange={() => {
+          setOpen(!open);
+        }}
+      >
         <SheetContent>
           <SheetHeader>
             <SheetTitle>Edit Profile</SheetTitle>
             <SheetDescription>
               <div className="flex flex-col gap-3">
-                  <div className="flex flex-col mt-5">
-                    <label className="text-black text-lg font-semibold" htmlFor="">Name</label>
-                    <input type="text" defaultValue={user?.user?.name} name="name" id="name" className="border-2  px-2 py-1"/>
-                  </div>
-                  <div className="flex flex-col mt-5">
-                    <label className="text-black text-lg font-semibold" htmlFor="">Email</label>
-                    <input type="text" name="email" defaultValue={user?.user?.email} id="email" className="border-2  px-2 py-1"/>
-                  </div>
-                  <div className="flex flex-col mt-5">
-                    <label className="text-black text-lg font-semibold" htmlFor="">Password</label>
-                    <input type="text" name="password" defaultValue={user?.user?.password} id="password" className="border-2  px-2 py-1"/>
-                  </div>
-                  <button className="bg-primary py-2 text-lg text-white mt-4 rounded" onClick={handleUpdate}>Save</button>
+                <div className="flex flex-col mt-5">
+                  <label
+                    className="text-black text-lg font-semibold"
+                    htmlFor=""
+                  >
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    defaultValue={user?.user?.name}
+                    name="name"
+                    id="name"
+                    className="border-2  px-2 py-1"
+                  />
+                </div>
+                <div className="flex flex-col mt-5">
+                  <label
+                    className="text-black text-lg font-semibold"
+                    htmlFor=""
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="text"
+                    name="email"
+                    defaultValue={user?.user?.email}
+                    id="email"
+                    className="border-2  px-2 py-1"
+                  />
+                </div>
+                <div className="flex flex-col mt-5">
+                  <label
+                    className="text-black text-lg font-semibold"
+                    htmlFor=""
+                  >
+                    Password
+                  </label>
+                  <input
+                    type="text"
+                    name="password"
+                    defaultValue={user?.user?.password}
+                    id="password"
+                    className="border-2  px-2 py-1"
+                  />
+                </div>
+                <button
+                  className="bg-primary py-2 text-lg text-white mt-4 rounded"
+                  onClick={handleUpdate}
+                >
+                  Save
+                </button>
               </div>
             </SheetDescription>
           </SheetHeader>

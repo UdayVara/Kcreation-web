@@ -41,7 +41,7 @@ export default function Home() {
             <Image
               src="https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/banner-images/Top-Gun-Sneakers_Homepage_trrmhcW.jpg?format=webp&w=1500&dpr=1.3"
               alt=""
-              className="w-full"
+              className="max-w-[100vw] h-auto"
               width={1000}
               height={1000}
             />
@@ -51,7 +51,7 @@ export default function Home() {
             <Image
               src="https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/banner-images/Web-banner_25.jpg?format=webp&w=1500&dpr=1.3"
               alt=""
-              className="w-full"
+              className="max-w-[100vw] h-auto"
               width={1000}
               height={1000}
             />
@@ -60,7 +60,7 @@ export default function Home() {
             <Image
               src="https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/banner-images/Homepage-Banner_15_7Ioswgq.jpg?format=webp&w=1500&dpr=1.3"
               alt=""
-              className="w-full"
+              className="max-w-[100vw] h-auto"
               width={1000}
               height={1000}
             />
