@@ -191,7 +191,7 @@ function Header() {
                       <h1 className="text-lg">It Kcreation</h1>
                     </div>
                   </SheetTitle>
-                  <SheetDescription><div className="flex flex-col text-black">
+                  <SheetDescription><div className="flex flex-col gap-5 text-black">
                       <Link href={"/"} className="ml-5 text-lg">
                         Home
                       </Link>
