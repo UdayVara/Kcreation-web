@@ -180,7 +180,7 @@ function Header() {
               <SheetContent>
                 <SheetHeader>
                   <SheetTitle>
-                    <div className="flex gap-2 items-center  ">
+                    <div className="flex md:gap-2 gap-0.5 items-center  ">
                       <Image
                         src={"/Images/kcreation_logo.png"}
                         width={1000}
@@ -221,7 +221,7 @@ function Header() {
               <SheetContent>
                 <SheetHeader>
                   <SheetTitle>
-                    <div className="flex gap-2 items-center  ">
+                    <div className="flex md:gap-2 gap-0.5 items-center  ">
                       <Image
                         src={"/Images/kcreation_logo.png"}
                         width={1000}
