@@ -24,7 +24,7 @@ export default function Page({ params }: { params: { slug: string } }) {
     
     return <>
         <div className="container py-10 pb-16">
-            <div className="w-full grid grid-cols-12">
+            <div className="w-full grid grid-cols-12 lg:gap-14 md:gap-10 gap-0">
                 <div className=" lg:col-span-5 col-span-12">
                     <img src={product?._doc?.image ? product?._doc?.image : "https://images.pexels.com/photos/989960/pexels-photo-989960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"} alt="" className="h-[60vh] w-auto block mx-auto"/>
                 </div>

@@ -35,7 +35,7 @@ function Page() {
           Search
         </button>
         <h3 className="text-2xl mt-4 font-semibold">{products.length} Result Found</h3>
-        <div className="grid grid-cols-12 gap-10">
+        <div className="grid grid-cols-12 md:gap-10 ">
           {products &&
             products.length > 0 &&
             products?.map((item:any, index:any) => {
