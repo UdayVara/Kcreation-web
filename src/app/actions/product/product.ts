@@ -58,6 +58,7 @@ export const getProductById = async(data:{id:string}) => {
 }
 
 export const getRecents = async() => {
+    connectToDB()
     const products = await Product.find().sort({createdAt:-1}).limit(3)
 
     if(products){
