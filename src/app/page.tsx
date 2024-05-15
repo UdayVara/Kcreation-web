@@ -35,7 +35,7 @@ export default function Home() {
   },  [])
   return (
     <>
-      <Carousel className="mx-auto ">
+      <Carousel className="mx-auto relative"  >
         <CarouselContent>
           <CarouselItem>
             <Image
@@ -67,6 +67,8 @@ export default function Home() {
           </CarouselItem>
           
         </CarouselContent>
+        <CarouselPrevious  className="absolute left-6"/>
+        <CarouselNext className="absolute right-6" />
       </Carousel>
 
       <div className="container mx-auto mt-10  font-semibold text-xl py-10">
