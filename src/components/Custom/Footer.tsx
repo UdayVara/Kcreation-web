@@ -5,6 +5,8 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { FaRegCopyright } from "react-icons/fa";
+import { FaPinterest } from "react-icons/fa";
+
 import Link from "next/link";
 function Footer() {
   return (
@@ -14,11 +16,11 @@ function Footer() {
           <div className="lg:col-span-4 col-span-12">
             <h1 className="text-3xl">Follow Us On</h1>
             <div className="mt-3 flex flex-row gap-5">
-              <IoLogoInstagram className="text-3xl" />
-              <FaFacebook className="text-3xl" />
-              <FaXTwitter className="text-3xl" />
-              <FaYoutube className="text-3xl" />
-              <CiMail className="text-3xl" />
+              <Link target="_blank" href={"https://www.instagram.com/its_krupalijethva?igsh=Y3VmYWZrZG82bGpv"}><IoLogoInstagram className="text-3xl" /></Link>
+              <Link target="_blank" href={"https://www.facebook.com/share/MD5WohEzw6fqxeSV/?mibextid=qi2Omg"}><FaFacebook className="text-3xl" /></Link>
+              <Link target="_blank" href={"https://youtube.com/@its_krupalijethva?si=hLEJO5QbcLb7K4__"}><FaYoutube className="text-3xl" /></Link>
+              <Link target="_blank" href={"kcreationartist@gmail.com"}><CiMail className="text-3xl" /></Link>
+              <Link href={"https://www.pinterest.com/kcreation9/"} target="_blank"><FaPinterest className="text-3xl" /></Link>
             </div>
           </div>
           <div className="lg:col-span-4 md:col-span-6 col-span-12">
