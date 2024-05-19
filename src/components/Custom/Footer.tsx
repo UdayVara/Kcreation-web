@@ -19,7 +19,7 @@ function Footer() {
               <Link target="_blank" href={"https://www.instagram.com/its_krupalijethva?igsh=Y3VmYWZrZG82bGpv"}><IoLogoInstagram className="text-3xl" /></Link>
               <Link target="_blank" href={"https://www.facebook.com/share/MD5WohEzw6fqxeSV/?mibextid=qi2Omg"}><FaFacebook className="text-3xl" /></Link>
               <Link target="_blank" href={"https://youtube.com/@its_krupalijethva?si=hLEJO5QbcLb7K4__"}><FaYoutube className="text-3xl" /></Link>
-              <Link target="_blank" href={"kcreationartist@gmail.com"}><CiMail className="text-3xl" /></Link>
+              <Link target="_blank" href={"mailto:kcreationartist@gmail.com"}><CiMail className="text-3xl" /></Link>
               <Link href={"https://www.pinterest.com/kcreation9/"} target="_blank"><FaPinterest className="text-3xl" /></Link>
             </div>
           </div>

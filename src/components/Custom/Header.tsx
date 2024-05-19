@@ -115,7 +115,7 @@ function Header() {
           width={1000}
           height={1000}
           alt="Failed to Load Image"
-          className="h-16 my-2 w-auto bg-none "
+          className="lg:h-16 md:h-14 h-12  my-2 w-auto bg-none "
         />
         <div className=" flex-row gap-12 text-lg md:flex hidden ">
           <div className="flex flex-col">
@@ -143,7 +143,43 @@ function Header() {
             <div className="w-full h-[2px] bg-black scale-0 peer-hover:scale-100 origin-left transition-all duration-300"></div>
           </div>
         </div>
-        {user ? (
+
+        <Sheet open={open} onOpenChange={()=>{setOpen(!open)}}>
+              <SheetTrigger className="md:hidden block">
+                <GiHamburgerMenu className="text-xl" />
+              </SheetTrigger>
+              <SheetContent>
+                <SheetHeader>
+                  <SheetTitle>
+                    <div className="flex gap-4 justify-center items-center  ">
+                      <Image
+                        src={"/Images/kcreation_logo.png"}
+                        width={1000}
+                        height={1000}
+                        alt="Failed to Load Image"
+                        className="lg:h-16 md:h-12 h-8 my-2 w-auto bg-none "
+                      />
+                      <h1 className="text-lg">It Kcreation</h1>
+                    </div>
+                  </SheetTitle>
+                  <SheetDescription><div className="flex items-center flex-col gap-5 text-black">
+                      <Link href={"/"} className="ml-5 text-lg" onClick={()=>{setOpen(!open)}}>
+                        Home
+                      </Link>
+                      <Link href={"/about"} className="ml-5 text-lg" onClick={()=>{setOpen(!open)}}>
+                        About
+                      </Link>
+                      <Link href={"/shop"} className="ml-5 text-lg" onClick={()=>{setOpen(!open)}}>
+                        Shop
+                      </Link>
+                      <Link href={"/contact"} className="ml-5 text-lg" onClick={()=>{setOpen(!open)}}>
+                        Contact
+                      </Link>
+                    </div></SheetDescription>
+                </SheetHeader>
+              </SheetContent>
+            </Sheet>
+        {/*user ? (
           <>
             <div className="ml-5 flex-row items-center gap-8 text-xl md:flex hidden ">
               <DropdownMenu>
@@ -154,7 +190,7 @@ function Header() {
                 <DropdownMenuContent>
                   <DropdownMenuLabel>My Account</DropdownMenuLabel>
                   <DropdownMenuSeparator />
-                  {/* <DropdownMenuItem>My Favorites</DropdownMenuItem> */}
+                  <DropdownMenuItem>My Favorites</DropdownMenuItem> 
                   <DropdownMenuItem
                     onClick={() => {
                       setOpen(!open);
@@ -186,7 +222,7 @@ function Header() {
                         width={1000}
                         height={1000}
                         alt="Failed to Load Image"
-                        className="h-16 my-2 w-auto bg-none "
+                        className="lg:h-16 md:h-12 h-8 my-2 w-auto bg-none "
                       />
                       <h1 className="text-lg">It Kcreation</h1>
                     </div>
@@ -255,9 +291,9 @@ function Header() {
               </SheetContent>
             </Sheet>
           </>
-        )}
+        )*/}
       </div>
-      <Sheet
+      {/* <Sheet
         open={open}
         onOpenChange={() => {
           setOpen(!open);
@@ -323,7 +359,7 @@ function Header() {
             </SheetDescription>
           </SheetHeader>
         </SheetContent>
-      </Sheet>
+      </Sheet> */}
     </>
   );
 }
