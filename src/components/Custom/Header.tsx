@@ -39,9 +39,9 @@ import {
 function Header() {
   const addNewCategory = async () => {
     const res = await addCategory({
-      name: "Earphones Case",
+      name: "Crochet Bag",
       description:
-        "An earphone case cover protects your earbuds from daily wear and tear, and can also help you avoid dust and moisture when you're not using them.",
+        "random string",
       gender: "unisex",
     });
 
@@ -53,13 +53,12 @@ function Header() {
   };
   const addNewProduct = async () => {
     const res = await addProduct({
-      name: "Nazar Bracelets",
-      category: "661424bdfde1325d50c74505",
+      name: "crochet bag1",
+      category: "6652dc03b99c40b869d8d6ee",
       description: "Pair of Nazar Bracelets pack of 2 black and white",
       price: 230,
       discount: 5,
-      image:
-        "https://utfs.io/f/e1bc50e5-2394-44f5-a6fe-e3a60e3ee96a-y1t39r.app_399219982_721474733158575_1634224297728998486_n_1080.jpg",
+      image:"https://utfs.io/f/6f2a38ab-9410-40c8-96cb-8fe840f32040-i7t08q.png",
     });
 
     if (res.success) {
@@ -107,17 +106,21 @@ function Header() {
   return (
     <>
       <h1 className="w-full bg-primary text-white font-semibold text-center py-1 text-base">
-        Find What Fits The Best For You
+      From Threads to Shine, 
+Your Story Begins Here
+
       </h1>
-      <div className="w-full border shadow flex  flex-row justify-between px-10 items-center bg-white ">
+      <div className="w-full border shadow flex  flex-row justify-between px-8 items-center bg-white ">
+        <Link href={"/"}>
         <Image
           src={"/Images/kcreation_logo.png"}
           width={1000}
           height={1000}
           alt="Failed to Load Image"
           className="lg:h-16 md:h-14 h-12  my-2 w-auto bg-none "
-        />
-        <div className=" flex-row gap-12 text-lg md:flex hidden ">
+          />
+          </Link>
+        <div className=" flex-row gap-12  text-lg md:flex hidden ">
           <div className="flex flex-col">
             <Link className="peer" href={"/"}>
               Home
@@ -137,9 +140,13 @@ function Header() {
             <div className="w-full h-[2px] bg-black scale-0 peer-hover:scale-100 origin-left transition-all duration-300"></div>
           </div>
           <div>
-            <Link className="peer" href={"/contact"}>
-              Contact
+            <Link className="peer" href={"/terms"}>
+              Terms & Conditions
             </Link>
+            <div className="w-full h-[2px] bg-black scale-0 peer-hover:scale-100 origin-left transition-all duration-300"></div>
+          </div>
+          <div>
+            
             <div className="w-full h-[2px] bg-black scale-0 peer-hover:scale-100 origin-left transition-all duration-300"></div>
           </div>
         </div>
@@ -151,7 +158,7 @@ function Header() {
               <SheetContent>
                 <SheetHeader>
                   <SheetTitle>
-                    <div className="flex gap-4 justify-center items-center  ">
+                    <div className="flex mt-5 gap-4 justify-center items-center  ">
                       <Image
                         src={"/Images/kcreation_logo.png"}
                         width={1000}
@@ -159,7 +166,7 @@ function Header() {
                         alt="Failed to Load Image"
                         className="lg:h-16 md:h-12 h-8 my-2 w-auto bg-none "
                       />
-                      <h1 className="text-lg">It Kcreation</h1>
+                      <h1 className="text-lg">It KCreation</h1>
                     </div>
                   </SheetTitle>
                   <SheetDescription><div className="flex items-center flex-col gap-5 text-black">
@@ -172,9 +179,10 @@ function Header() {
                       <Link href={"/shop"} className="ml-5 text-lg" onClick={()=>{setOpen(!open)}}>
                         Shop
                       </Link>
-                      <Link href={"/contact"} className="ml-5 text-lg" onClick={()=>{setOpen(!open)}}>
-                        Contact
+                      <Link href={"/terms"} className="ml-5 text-lg" onClick={()=>{setOpen(!open)}}>
+                        Terms & Conditions
                       </Link>
+                      
                     </div></SheetDescription>
                 </SheetHeader>
               </SheetContent>

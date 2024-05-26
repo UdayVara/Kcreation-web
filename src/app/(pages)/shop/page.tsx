@@ -14,7 +14,7 @@ function Page() {
     const res = await getProducts(data);
 
     if (res.success) {
-      toast.success(res.message);
+      // toast.success(res.message);
       setProducts(res?.products || []);
     } else {
       toast.error(res.message);
@@ -27,13 +27,7 @@ function Page() {
     <>
       <div className="container">
         <ShopFilter filter={data} setFilter={setData} />
-        <button
-          onClick={() => {
-            console.log(data);
-          }}
-        >
-          Search
-        </button>
+        
         <h3 className="text-2xl mt-4 font-semibold">{products.length} Result Found</h3>
         <div className="grid grid-cols-12 md:gap-10 ">
           {products &&

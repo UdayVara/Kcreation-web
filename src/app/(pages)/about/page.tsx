@@ -3,6 +3,7 @@
  * @see https://v0.dev/t/gLOlSSIo2lU
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
+import Reviews from "@/components/Custom/Review";
 import Link from "next/link";
 
 export default function Component() {
@@ -45,7 +46,7 @@ export default function Component() {
                   </h1>
                   <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
                     Discover our passion for crafting unique and high-quality
-                    handmade embroidery, crochet, and bracelets.
+                    handmade  crochet, and Jewellery.
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -55,12 +56,12 @@ export default function Component() {
                   >
                     Shop Now
                   </Link>
-                  <Link
+                  {/* <Link
                     className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
                     href="#"
                   >
                     Learn More
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
               <img
@@ -80,11 +81,32 @@ export default function Component() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   About Our Handmade Creations
                 </h2>
-                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  At Handmade Creations, we are passionate about crafting unique
-                  and high-quality handmade items. Our team of skilled artisans
-                  pours their heart and soul into every piece, ensuring that
-                  each creation is a true work of art.
+                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-justify dark:text-gray-400">
+                  At just 19 years old, I embarked on a remarkable journey of
+                  creativity and entrepreneurship. What began as a simple hobby,
+                  creating crochet products and handmade jewelry for my own
+                  pleasure, soon blossomed into something much greater. As
+                  friends, family, and even strangers began to admire and
+                  inquire about my creations, I realized there was a genuine
+                  demand for the unique pieces I crafted with love and
+                  dedication. <br /><br />Driven by the desire to share my passion with
+                  others and provide them with high-quality goods that wouldn’t
+                  break the bank, I made the bold decision to turn my hobby into
+                  a business venture. Thus, KCreation was born from Rajkot,
+                  Gujarat, started in 2023. <br /><br />Every stitch, every bead, every
+                  detail is a testament to the countless hours of practice,
+                  experimentation, and refinement that have shaped my craft. But
+                  beyond the technical skill lies something far more profound –
+                  a story of growth, resilience, and unwavering determination.
+                  <br /><br />
+                  With each handmade item, I pour not only my creativity and
+                  expertise but also a piece of my heart. KCreation is more than
+                  just a brand; it’s a reflection of my journey, my values, and
+                  my commitment to offering products that bring joy and beauty
+                  into people’s lives. Whether it’s a cozy crochet tank top or a
+                  dazzling beaded bracelet, each piece tells a story – a story
+                  of passion, dedication, and the simple pleasure of creating
+                  something beautiful from scratch.
                 </p>
               </div>
             </div>
@@ -97,9 +119,7 @@ export default function Component() {
                 <img
                   alt="Embroidery"
                   className="mx-auto w-full h-auto overflow-hidden rounded-xl object-cover object-center sm:w-full"
-                  
                   src="/Images/category4.png"
-                  
                 />
                 <div className="mt-4 space-y-2">
                   <h3 className="text-xl font-bold">Embroidery</h3>
@@ -110,7 +130,7 @@ export default function Component() {
                   </p>
                   <Link
                     className="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors  focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                    href="#"
+                    href="/shop"
                   >
                     Explore Embroidery
                   </Link>
@@ -130,7 +150,7 @@ export default function Component() {
                   </p>
                   <Link
                     className="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                    href="#"
+                    href="/shop"
                   >
                     Explore Crochet
                   </Link>
@@ -150,7 +170,7 @@ export default function Component() {
                   </p>
                   <Link
                     className="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors  focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                    href="#"
+                    href="/shop"
                   >
                     Explore Bracelets
                   </Link>
@@ -184,6 +204,7 @@ export default function Component() {
           </div>
         </section>
       </main>
+      <Reviews />
       {/* <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <p className="text-xs text-gray-500 dark:text-gray-400">
           © 2024 Handmade Creations. All rights reserved.

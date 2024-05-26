@@ -26,10 +26,10 @@ function Footer() {
           <div className="lg:col-span-4 md:col-span-6 col-span-12">
             <h1 className="text-3xl">Shop</h1>
             <div className="mt-3 flex flex-col gap-5">
-              <h1 className="ml-5 text-lg">Bracelet</h1>
-              <h1 className="ml-5 text-lg">Necklace</h1>
-              <h1 className="ml-5 text-lg">Woolen Sweater</h1>
-              <h1 className="ml-5 text-lg">Woollen Case</h1>
+              <Link href={"/shop"} className="ml-5 text-lg">Bracelet</Link>
+              <Link href={"/shop"} className="ml-5 text-lg">Necklace</Link>
+              <Link href={"/shop"} className="ml-5 text-lg">Woolen Sweater</Link>
+              <Link href={"/shop"} className="ml-5 text-lg">Woollen Case</Link>
             </div>
           </div>
           <div className="lg:col-span-4 md:col-span-6 col-span-12">
@@ -38,11 +38,12 @@ function Footer() {
               <Link href={"/"} className="ml-5 text-lg">Home</Link>
               <Link href={"/about"} className="ml-5 text-lg">About</Link>
               <Link href={"/contact"} className="ml-5 text-lg">Contact</Link>
+              <Link href={"/terms"} className="ml-5 text-lg">Terms & Condition</Link>
             </div>
           </div>
 
         </div>
-          <h1 className="text-center mt-8 flex items-center justify-center"> <FaRegCopyright className="inline-block mr-2 text-lg"/>Kcreation All Rights Reserved</h1>
+          <h1 className="text-center mt-8 flex items-center justify-center"> <FaRegCopyright className="inline-block mr-2 text-lg"/>KCreation All Rights Reserved</h1>
       </div>
     </>
   );

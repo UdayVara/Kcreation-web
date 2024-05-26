@@ -20,8 +20,8 @@ function ItemCard({id,name,price,discount,image}:{id:string,name:string,price:nu
         className="w-full h-[420px] object-cover object-center "
         alt="Failed To load"
       />
-      <div className="body md:px-3 my-2  flex flex-col">
-        <h1 className="text-sm text-neutral-400">Mens</h1>
+      <div className="body md:px-3 my-2 flex flex-col">
+        {/* <h1 className="text-sm text-neutral-400">Mens</h1> */}
         <div className="card-header flex justify-between items-start gap-2">
           <h1 className="text-md grow">{name}</h1>
           {/* <FaHeart
