@@ -10,14 +10,14 @@ function ItemCard({id,name,price,discount,image}:{id:string,name:string,price:nu
   const [isFav, setFav] = useState<boolean>(false);
   const router = useRouter()
   return (
-    <div className="md:w-[340px] w-full h-[580px] border bg-slate-50 my-5 rounded" onClick={()=>{router.push(`/shop/${id}`)}}>
+    <div className="md:w-[340px] w-full md:h-[580px] h-[380px] border bg-slate-50 my-5 rounded" onClick={()=>{router.push(`/shop/${id}`)}}>
       <Image
         src={
           image?image:"https://images.pexels.com/photos/989960/pexels-photo-989960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         }
         height={1000}
         width={1000}
-        className="w-full h-[420px] object-cover object-center "
+        className="w-full md:h-[420px] h-[250px] object-cover object-center "
         alt="Failed To load"
       />
       <div className="body md:px-3 my-2 flex flex-col">
