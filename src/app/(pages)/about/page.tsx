@@ -68,7 +68,7 @@ export default function Component() {
                 alt="Handmade Products"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
                 height="450"
-                src="/Images/about.png"
+                src="/Images/about.jpg"
                 width="650"
               />
             </div>
