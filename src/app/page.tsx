@@ -58,7 +58,7 @@ export default function Home() {
           </CarouselItem>
           <CarouselItem>
             <Image
-              src="/Images/banner3.jpg"
+              src="/Images/banner3.png"
               alt=""
               className="max-w-[100vw] h-auto"
               width={1000}
