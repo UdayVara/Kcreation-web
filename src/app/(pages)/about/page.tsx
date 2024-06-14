@@ -46,7 +46,7 @@ export default function Component() {
                   </h1>
                   <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
                     Discover our passion for crafting unique and high-quality
-                    handmade  crochet, and Jewellery.
+                    handmade crochet, and Jewellery.
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -74,7 +74,28 @@ export default function Component() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+        <section className="w-full py-12 md:py-24 lg:py-24 bg-gray-100 dark:bg-gray-800">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  KCreation stands for:
+                </h2>
+                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-justify dark:text-gray-400 pt-5co">
+                  Welcome to KCreation: Where handcrafted treasures, woven with
+                  Love. It emphasizes the artisanal quality and heartfelt
+                  dedication put into each piece, resonating with customers who
+                  value authenticity and craftsmanship.
+                  <br /><br />
+                  KCreation represents a blend of artistry, passion, and
+                  affordability, making it more than just a brand but a symbol
+                  of creativity and inspiration.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-12 bg-gray-100 dark:bg-gray-800">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -89,16 +110,21 @@ export default function Component() {
                   friends, family, and even strangers began to admire and
                   inquire about my creations, I realized there was a genuine
                   demand for the unique pieces I crafted with love and
-                  dedication. <br /><br />Driven by the desire to share my passion with
-                  others and provide them with high-quality goods that wouldn’t
-                  break the bank, I made the bold decision to turn my hobby into
-                  a business venture. Thus, KCreation was born from Rajkot,
-                  Gujarat, started in 2023. <br /><br />Every stitch, every bead, every
-                  detail is a testament to the countless hours of practice,
-                  experimentation, and refinement that have shaped my craft. But
-                  beyond the technical skill lies something far more profound –
-                  a story of growth, resilience, and unwavering determination.
-                  <br /><br />
+                  dedication. <br />
+                  <br />
+                  Driven by the desire to share my passion with others and
+                  provide them with high-quality goods that wouldn’t break the
+                  bank, I made the bold decision to turn my hobby into a
+                  business venture. Thus, KCreation was born from Rajkot,
+                  Gujarat, started in 2023. <br />
+                  <br />
+                  Every stitch, every bead, every detail is a testament to the
+                  countless hours of practice, experimentation, and refinement
+                  that have shaped my craft. But beyond the technical skill lies
+                  something far more profound – a story of growth, resilience,
+                  and unwavering determination.
+                  <br />
+                  <br />
                   With each handmade item, I pour not only my creativity and
                   expertise but also a piece of my heart. KCreation is more than
                   just a brand; it’s a reflection of my journey, my values, and
