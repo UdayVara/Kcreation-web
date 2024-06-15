@@ -10,26 +10,49 @@ export default function Reviews() {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        
         <div className="bg-white dark:bg-gray-950 rounded-lg p-6 shadow-sm">
           <div className="flex items-center gap-4">
-            <p className="p-2 rounded-full">UV</p>
+            <p className="p-2 rounded-full">HD</p>
             <div className="grid gap-0.5">
-              <h3 className="font-semibold">Sarah Johnson</h3>
+              <h3 className="font-semibold">Hetvi Dodiya</h3>
               <div className="flex items-center gap-0.5">
                 <StarIcon className="w-4 h-4 fill-primary" />
                 <StarIcon className="w-4 h-4 fill-primary" />
                 <StarIcon className="w-4 h-4 fill-primary" />
-                <StarIcon className="w-4 h-4 fill-muted stroke-muted-foreground" />
-                <StarIcon className="w-4 h-4 fill-muted stroke-muted-foreground" />
+                <StarIcon className="w-4 h-4 fill-primary" />
+                <StarIcon className="w-4 h-4 fill-primary" />
+                
               </div>
             </div>
           </div>
           <div className="mt-4 text-sm leading-loose text-gray-500 dark:text-gray-400">
             <p>
-              I've been experimenting with my LuminaCook Multi-Function Air
-              Fryer for a few weeks now, and it's been a versatile addition to
-              my kitchen. It's great for making crispy fries, chicken wings, and
-              even some healthier options.
+            The bracelets and chains are very pretty and creative 💗 and Loved the packaging . Will definitely placing more orders 🫶🏻
+
+            </p>
+          </div>
+        </div>
+        <div className="bg-white dark:bg-gray-950 rounded-lg p-6 shadow-sm">
+          <div className="flex items-center gap-4">
+            <p className="p-2 rounded-full">CM</p>
+            <div className="grid gap-0.5">
+              <h3 className="font-semibold">Maithili Chudasama</h3>
+              <div className="flex items-center gap-0.5">
+                <StarIcon className="w-4 h-4 fill-primary" />
+                <StarIcon className="w-4 h-4 fill-primary" />
+                <StarIcon className="w-4 h-4 fill-primary" />
+                <StarIcon className="w-4 h-4 fill-primary" />
+                <StarIcon className="w-4 h-4 fill-primary" />
+                
+              </div>
+            </div>
+          </div>
+          <div className="mt-4 text-sm leading-loose text-gray-500 dark:text-gray-400">
+            <p>
+            Your service and packaging are lovely, and I appreciate the great work you do. The handmade earrings you were made for me are wonderful, and the crochet case you were crafted is beautiful. I am thrilled to receive these handmade items from you. Great work, KCreations! 
+
+
             </p>
           </div>
         </div>

@@ -74,6 +74,7 @@ function ShopFilter({ filter, setFilter }: { filter: any; setFilter: any }) {
             <SelectContent>
               <SelectItem value="male">Male</SelectItem>
               <SelectItem value="female">Female</SelectItem>
+              <SelectItem value="unisex">Unisex</SelectItem>
             </SelectContent>
           </Select>
         </div>
