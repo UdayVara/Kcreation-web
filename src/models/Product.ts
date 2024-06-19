@@ -30,6 +30,9 @@ const productSchema = new Schema(
     isList:{
       type: Boolean,
       default:false
+    },gender:{
+      type:String,
+      default:"unisex"
     }
   },
   {
