@@ -27,6 +27,10 @@ const productSchema = new Schema(
       type: String,
       
     },
+    isList:{
+      type: Boolean,
+      default:false
+    }
   },
   {
     timestamps: true,

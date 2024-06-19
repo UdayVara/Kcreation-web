@@ -1,6 +1,7 @@
 "use client";
 
 import { getProductById } from "@/app/actions/product/product";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
@@ -25,7 +26,8 @@ export default function Page({ params }: { params: { slug: string } }) {
       <div className="container py-10 pb-16">
         <div className="w-full grid grid-cols-12 lg:gap-14 md:gap-10 gap-0">
           <div className=" lg:col-span-5 col-span-12">
-            <img
+            <Image
+              loading="lazy"
               src={product?._doc?.image}
               alt=""
               className="h-[60vh] w-auto block mx-auto"
@@ -34,8 +36,26 @@ export default function Page({ params }: { params: { slug: string } }) {
           <div className="lg:col-span-6 col-span-12 lg:mt-0 mt-10">
             <h4 className="text-2xl font-semibold">{product?._doc?.name}</h4>
             <h5 className="text-lg">Category {product?.categoryName}</h5>
+            {product?._doc?.isList ? (
+              <>
+                <ul className="list-disc list-outside ml-4 mt-3 mb-2">
+                  {product?._doc?.description
+                    ?.split(",")
+                    .map((item: any, index: any) => {
+                      return (
+                        <li key={index} className="first-letter:uppercase">
+                          {item}
+                        </li>
+                      );
+                    })}
+                </ul>
+              </>
+            ) : (
+              <>
+                <h5>Description : {product?._doc?.description}</h5>
+              </>
+            )}
 
-            <h5>Description : {product?._doc?.description}</h5>
             <h3 className="text-xl mt-4">
               Price :{" "}
               {Math.floor(
