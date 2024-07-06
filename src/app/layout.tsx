@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Custom/Header";
 import Footer from "@/components/Custom/Footer";
 import ToastProvider from "@/providers/ToastProvider";
+import TransitionProvider from "@/providers/TransitionProvider";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -24,7 +25,7 @@ export default function RootLayout({
         <ToastProvider />
         {children}
         <Footer />
-        </body>
+      </body>
     </html>
   );
 }

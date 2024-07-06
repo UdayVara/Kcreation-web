@@ -15,10 +15,12 @@ import { signInUser } from "./actions/auth/authentication";
 import { useEffect, useState } from "react";
 import { getRecents } from "./actions/product/product";
 import toast from "react-hot-toast";
+import { Skeleton } from "@/components/ui/skeleton";
+import SkelatonCard from "@/components/Custom/SkelatonCard";
 
 export default function Home() {
   const [products, setProduts] = useState<any>([]);
-
+  // const products = null;
   const getTopProducts = async () => {
     const res = await getRecents();
 
@@ -30,12 +32,12 @@ export default function Home() {
     }
   };
 
-  useEffect(()=>{
-    getTopProducts()
-  },  [])
+  useEffect(() => {
+    getTopProducts();
+  }, []);
   return (
     <>
-      <Carousel className="mx-auto relative"  >
+      <Carousel className="mx-auto relative">
         <CarouselContent>
           <CarouselItem>
             <Image
@@ -65,9 +67,8 @@ export default function Home() {
               height={1000}
             />
           </CarouselItem>
-          
         </CarouselContent>
-        <CarouselPrevious  className="absolute left-6"/>
+        <CarouselPrevious className="absolute left-6" />
         <CarouselNext className="absolute right-6" />
       </Carousel>
 
@@ -75,24 +76,33 @@ export default function Home() {
         <h3 className="lg:text-2xl text-lg -ml-4 md:-ml-0">Best Sellers</h3>
 
         <div className=" mt-3 grid grid-cols-12  gap-7 place-content-center place-items-center">
-          {products &&
-            products.length > 0 &&
-            products?.map((item: any, index: any) => {
-              return (
-                <div
-                  key={index}
-                  className="xl:col-span-4 xs:col-span-6 col-span-12"
-                >
-                  <ItemCard
-                    id={item._id}
-                    name={item.name}
-                    price={item.price}
-                    discount={item.discount}
-                    image={item.image}
-                  />
-                </div>
-              );
-            })}
+          {products && products.length > 0
+            ? products?.map((item: any, index: any) => {
+                return (
+                  <div
+                    key={index}
+                    className="xl:col-span-4 xs:col-span-6 col-span-12"
+                  >
+                    <ItemCard
+                      id={item._id}
+                      name={item.name}
+                      price={item.price}
+                      discount={item.discount}
+                      image={item.image}
+                    />
+                  </div>
+                );
+              })
+            : [1, 2, 4].map((item, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="xl:col-span-4 xs:col-span-6 col-span-12"
+                  >
+                    <SkelatonCard />
+                  </div>
+                );
+              })}
         </div>
 
         <div className="my-5">
