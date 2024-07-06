@@ -71,7 +71,7 @@ export default function Home() {
         <CarouselNext className="absolute right-6" />
       </Carousel>
 
-      <div className="container mx-auto mt-10  font-semibold text-xl py-10">
+      <div className="container mx-auto md:mt-10 mt-6  font-semibold text-xl py-10">
         <h3 className="lg:text-2xl text-lg -ml-4 md:-ml-0">Best Sellers</h3>
 
         <div className=" mt-3 grid grid-cols-12 gap-7 place-content-center place-items-center">
