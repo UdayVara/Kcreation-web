@@ -1,5 +1,5 @@
 import { User } from "@/models/User";
-import { connectToDB } from "@/utils/connectToDb";
+// import { connectToDB } from "@/utils/connectToDb";
 import NextAuth  from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 export const { handlers, signIn, signOut, auth } = NextAuth({
@@ -14,7 +14,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       async authorize(credentials, request) {
         const { name, email, password } = credentials;
 
-        connectToDB();
+        // connectToDB();
 
         const user = await User.find({ email: email });
 

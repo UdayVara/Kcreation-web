@@ -1,10 +1,10 @@
 "use server"
 import { Category } from "@/models/Category"
 import { Product } from "@/models/Product"
-import { connectToDB } from "@/utils/connectToDb"
+// import { connectToDB } from "@/utils/connectToDb"
 
 export const addProduct = async(data:{name:string,category:string,description:string,price:Number,discount:Number,image:String}) => {
-    connectToDB()
+    // connectToDB()
     const res = await Product.create({
         ...data
     })
@@ -18,7 +18,7 @@ export const addProduct = async(data:{name:string,category:string,description:st
 
 
 export const getProducts = async(data:{name:string,category:string,gender:string}) => {
-    connectToDB()
+    // connectToDB()
     
     const {name,category,gender} = data
     
@@ -41,7 +41,7 @@ export const getProducts = async(data:{name:string,category:string,gender:string
 
 
 export const getProductById = async(data:{id:string}) => {
-    connectToDB()
+    // connectToDB()
     
     const product = await Product.findById(data.id)
     const category = await Category.findById(product?.category)
@@ -58,7 +58,7 @@ export const getProductById = async(data:{id:string}) => {
 }
 
 export const getRecents = async() => {
-    connectToDB()
+    // connectToDB()
     const products = await Product.find().sort({createdAt:-1}).limit(3)
 
     if(products){

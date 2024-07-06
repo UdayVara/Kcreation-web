@@ -1,10 +1,10 @@
 "use server"
 
 import { Category } from "@/models/Category"
-import { connectToDB } from "@/utils/connectToDb"
+// import { connectToDB } from "@/utils/connectToDb"
 
 export const addCategory = async(payload:{name:string,description:string,gender:string}) => {
-    connectToDB()
+    // connectToDB()
 
     const res = await Category.create({
         ...payload
@@ -19,7 +19,7 @@ export const addCategory = async(payload:{name:string,description:string,gender:
 
 
 export const getAllCategory = async() => {
-    connectToDB()
+    // connectToDB()
     const res = await Category.find({})
 
     if(res){
