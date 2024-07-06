@@ -74,14 +74,14 @@ export default function Home() {
       <div className="container mx-auto md:mt-10 mt-6  font-semibold text-xl py-10">
         <h3 className="lg:text-2xl text-lg -ml-4 md:-ml-0">Best Sellers</h3>
 
-        <div className=" mt-3 grid grid-cols-12 gap-7 place-content-center place-items-center">
+        <div className=" mt-3 grid grid-cols-12  gap-7 place-content-center place-items-center">
           {products &&
             products.length > 0 &&
             products?.map((item: any, index: any) => {
               return (
                 <div
                   key={index}
-                  className="lg:col-span-4 xs:col-span-6 col-span-12"
+                  className="xl:col-span-4 xs:col-span-6 col-span-12"
                 >
                   <ItemCard
                     id={item._id}
