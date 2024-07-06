@@ -27,7 +27,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      {product && <div className="container py-10 pb-16">
+      {product ? <div className="container py-10 pb-16">
         <div className="w-full grid grid-cols-12 lg:gap-14 md:gap-10 gap-0">
           <div className=" lg:col-span-5 col-span-12">
             <Image
@@ -83,7 +83,7 @@ export default function Page({ params }: { params: { slug: string } }) {
             </button>
           </div>
         </div>
-      </div>}
+      </div> : <div className="min-h-72"></div>}
     </>
   );
 }
