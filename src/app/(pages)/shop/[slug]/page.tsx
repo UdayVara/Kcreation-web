@@ -30,12 +30,14 @@ export default function Page({ params }: { params: { slug: string } }) {
               loading="lazy"
               src={product?._doc?.image}
               alt=""
-              className="h-[60vh] w-auto block mx-auto"
+              width={1000}
+              height={1000}
+              className="h-[60vh] w-auto max-w-full object-contain block mx-auto"
             />
           </div>
-          <div className="lg:col-span-6 col-span-12 lg:mt-0 mt-10">
-            <h4 className="text-2xl font-semibold">{product?._doc?.name}</h4>
-            <h5 className="text-lg">Category {product?.categoryName}</h5>
+          <div className="lg:col-span-6 col-span-12 lg:mt-0 md:mt-10 mt-2">
+            <h4 className="lg:text-2xl text-xl md:ml-0 -ml-2 font-semibold">{product?._doc?.name}</h4>
+            <h5 className="lg:text-lg text-sm">Category {product?.categoryName}</h5>
             {product?._doc?.isList ? (
               <>
                 <ul className="list-disc list-outside ml-4 mt-3 mb-2">
@@ -56,7 +58,7 @@ export default function Page({ params }: { params: { slug: string } }) {
               </>
             )}
 
-            <h3 className="text-xl mt-4">
+            <h3 className="lg:text-xl text-base mt-4">
               Price :{" "}
               {Math.floor(
                 product?._doc?.price -
@@ -65,7 +67,7 @@ export default function Page({ params }: { params: { slug: string } }) {
               Rs.
             </h3>
             <button
-              className="btn-primary mt-3 bg-primary py-2 px-3 rounded text-white text-lg"
+              className="btn-primary mt-3 bg-primary py-2 px-3 rounded text-white text-base md:text-lg"
               onClick={() => {
                 window.open(
                   "https://www.instagram.com/its_krupalijethva",

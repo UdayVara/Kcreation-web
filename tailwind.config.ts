@@ -10,7 +10,22 @@ const config = {
   ],
   prefix: "",
   theme: {
-    
+    screens: {
+      xs: "350px",
+      sm: "640px",
+      // => @media (min-width: 640px) { ... }
+
+      md: "768px",
+      // => @media (min-width: 768px) { ... }
+
+      lg: "1024px",
+      // => @media (min-width: 1024px) { ... }
+
+      xl: "1280px",
+      // => @media (min-width: 1280px) { ... }
+
+      "2xl": "1536px",
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -33,8 +48,8 @@ const config = {
           to: { height: "0" },
         },
       },
-      colors:{
-        primary:"#B81BF7"
+      colors: {
+        primary: "#B81BF7",
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

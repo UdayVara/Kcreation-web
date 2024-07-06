@@ -72,16 +72,16 @@ export default function Home() {
       </Carousel>
 
       <div className="container mx-auto mt-10  font-semibold text-xl py-10">
-        <h3 className="text-2xl">Best Sellers</h3>
+        <h3 className="lg:text-2xl text-lg -ml-4 md:-ml-0">Best Sellers</h3>
 
-        <div className=" flex gap-5 md:justify-between justify-center flex-wrap mx-5">
+        <div className=" mt-3 grid grid-cols-12 gap-7 place-content-center place-items-center">
           {products &&
             products.length > 0 &&
             products?.map((item: any, index: any) => {
               return (
                 <div
                   key={index}
-                  className="lg:col-span-4 md:col-span-6 col-span-12"
+                  className="lg:col-span-4 xs:col-span-6 col-span-12"
                 >
                   <ItemCard
                     id={item._id}

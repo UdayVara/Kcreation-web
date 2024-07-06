@@ -105,7 +105,7 @@ function Header() {
 
   return (
     <>
-      <h1 className="w-full bg-primary text-white font-semibold text-center py-1 text-base">
+      <h1 className="w-full bg-primary text-white font-semibold text-center py-1 md:text-base text-sm">
       From Threads to Shine, 
 Your Story Begins Here
 
