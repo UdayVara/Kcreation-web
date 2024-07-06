@@ -105,9 +105,8 @@ function Header() {
 
   return (
     <>
-      <h1 className="w-full bg-primary text-white font-semibold text-center py-1 md:text-base text-sm">
-      From Threads to Shine, 
-Your Story Begins Here
+      <h1 className="w-full bg-primary text-white font-semibold text-center py-1 md:text-base text-xs">
+      Free Shipping on Orders above ₹1500
 
       </h1>
       <div className="w-full border shadow flex  flex-row justify-between px-8 items-center bg-white ">

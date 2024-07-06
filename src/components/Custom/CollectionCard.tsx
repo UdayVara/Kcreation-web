@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function CollectionCard({image,label,path}:{image:string,label:string,path:string}) {
   return (
-    <div className="lg:col-span-4 md:col-span-6 col-span-12 ">
+    <div className="lg:col-span-3 md:col-span-4 col-span-6  ">
       <Link href={path} className="relative">
         <Image
           src={
