@@ -2,11 +2,13 @@
 
 import { getProductById } from "@/app/actions/product/product";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 export default function Page({ params }: { params: { slug: string } }) {
   const [product, setProduct] = useState<any>();
+  const router = useRouter()
   const getProduct = async () => {
     const res = await getProductById({ id: params.slug });
     console.log(JSON.parse(res.product || ""));
@@ -14,6 +16,8 @@ export default function Page({ params }: { params: { slug: string } }) {
       setProduct(JSON.parse(res?.product || ""));
     } else {
       toast.error("Invalid Product ID.");
+      router.replace("/shop")
+      
     }
   };
 
@@ -23,7 +27,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <div className="container py-10 pb-16">
+      {product && <div className="container py-10 pb-16">
         <div className="w-full grid grid-cols-12 lg:gap-14 md:gap-10 gap-0">
           <div className=" lg:col-span-5 col-span-12">
             <Image
@@ -79,7 +83,7 @@ export default function Page({ params }: { params: { slug: string } }) {
             </button>
           </div>
         </div>
-      </div>
+      </div>}
     </>
   );
 }
