@@ -17,6 +17,7 @@ import { getRecents } from "./actions/product/product";
 import toast from "react-hot-toast";
 import { Skeleton } from "@/components/ui/skeleton";
 import SkelatonCard from "@/components/Custom/SkelatonCard";
+import Reviews from "@/components/Custom/Review";
 
 export default function Home() {
   const [products, setProduts] = useState<any>([]);
@@ -145,6 +146,7 @@ export default function Home() {
             />
           </div>
         </div>
+        <Reviews />
       </div>
     </>
   );
