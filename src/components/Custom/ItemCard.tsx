@@ -20,10 +20,10 @@ function ItemCard({id,name,price,discount,image}:{id:string,name:string,price:nu
         className="w-full md:h-[250px] h-[140px] object-contain object-center "
         alt="Failed To load"
       />
-      <div className="body  grow md:px-3 my-2 flex flex-col mt-3">
+      <div className="body  grow md:px-3  my-2 flex flex-col mt-3">
         {/* <h1 className="text-sm text-neutral-400">Mens</h1> */}
         <div className="card-header flex justify-between items-start gap-2">
-          <h1 className="md:text-md px-4 md:text-base text-xs  grow">{name}</h1>
+          <h1 className="md:text-md md:px-4 px-2 md:text-base text-xs  grow">{name}</h1>
           {/* <FaHeart
             className={`${
               isFav ? "text-red-600" : "text-slate-300"
@@ -33,7 +33,7 @@ function ItemCard({id,name,price,discount,image}:{id:string,name:string,price:nu
             }}
           /> */}
         </div>
-        <div className="card-body px-4  mt-1 self-baseline">
+        <div className="card-body md:px-4 px-2  mt-1 self-baseline">
           <h3 className="md:text-lg text-sm">
             ₹ {Math.floor(price -(discount*price)/100)}{" "}
             <span className=" line-through text-neutral-600">{price}</span>{" "}
