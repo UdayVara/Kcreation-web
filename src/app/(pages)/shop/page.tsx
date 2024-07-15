@@ -26,7 +26,7 @@ function Page() {
   }, [data]);
   return (
     <>
-      <div className="container">
+      <div className="container mb-8">
         <ShopFilter filter={data} setFilter={setData} />
 
         <h3 className="lg:text-2xl text-lg -ml-2 mb-2 mt-4 font-semibold">
