@@ -20,13 +20,15 @@ import SkelatonCard from "@/components/Custom/SkelatonCard";
 import Reviews from "@/components/Custom/Review";
 
 export default function Home() {
-  const [products, setProduts] = useState<any>([]);
+  const [recentProducts, setRecentProducts] = useState<any>([]);
+  const [topSellingProducts, setTopSellingProducts] = useState<any>([]);
   // const products = null;
   const getTopProducts = async () => {
     const res = await getRecents();
 
     if (res.success) {
-      setProduts(res?.products || []);
+      setRecentProducts(res?.recentProducts || []);
+      setTopSellingProducts(res?.topSellingProducts || []);
     } else {
       console.log(res.message);
       toast.error("Internal Server error.");
@@ -77,8 +79,39 @@ export default function Home() {
         <h3 className="lg:text-2xl text-lg -ml-4 md:-ml-0">Recent Launches</h3>
 
         <div className=" mt-3 grid grid-cols-12  gap-7 place-content-center place-items-center">
-          {products && products.length > 0
-            ? products?.map((item: any, index: any) => {
+          {recentProducts && recentProducts.length > 0
+            ? recentProducts?.map((item: any, index: any) => {
+                return (
+                  <div
+                    key={index}
+                    className="xl:col-span-4 xs:col-span-6 col-span-12"
+                  >
+                    <ItemCard
+                      id={item._id}
+                      name={item.name}
+                      price={item.price}
+                      discount={item.discount}
+                      image={item.image}
+                    />
+                  </div>
+                );
+              })
+            : [1, 2, 4].map((item, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="xl:col-span-4 xs:col-span-6 col-span-12"
+                  >
+                    <SkelatonCard />
+                  </div>
+                );
+              })}
+        </div>
+        <h3 className="lg:text-2xl text-lg -ml-4 md:-ml-0 mt-5">Best Sellers</h3>
+
+        <div className=" mt-3 grid grid-cols-12  gap-7 place-content-center place-items-center">
+          {topSellingProducts && topSellingProducts.length > 0
+            ? topSellingProducts?.map((item: any, index: any) => {
                 return (
                   <div
                     key={index}
